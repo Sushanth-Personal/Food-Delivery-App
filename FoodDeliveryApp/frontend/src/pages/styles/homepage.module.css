@@ -12,3 +12,9 @@ html{
     }
 
 }
+
+@media screen and (max-width: 950px) {
+    .homePage{
+        padding:0;
+    }
+}

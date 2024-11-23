@@ -51,9 +51,8 @@ const NavBarMobile = () => {
             id="headerdesktop-location-location-1"
           />
           <h3>
-            Regent Street, <span>A4</span>, A4201, London
+          Lution Street, N4G-00....
           </h3>
-          <a>Change Location</a>
         </div>
       </div>
       

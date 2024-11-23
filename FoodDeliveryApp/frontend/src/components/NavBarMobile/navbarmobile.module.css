@@ -1,4 +1,92 @@
-.navbar{
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.firstRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstRow .logo {
+  flex: 1;
+  margin: 27px 0px 27px 16px;
+}
+
+.firstRow .menu {
+  padding: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.firstRow .menu button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.secondRow {
+  display: flex;
+}
+
+.secondRow .loginSign {
+  flex: 1;
+}
+
+.secondRow .loginSign button {
+  width: 100%;
+  background-color: #03081f;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  padding: 25px;
+}
+
+.secondRow .loginSign button img {
+  margin-right: 10px;
+}
+
+.secondRow .cart {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #028643;
+}
+
+.secondRow .cart button {
+  background-color: #028643;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+
+.secondRow .cart button img {
+  margin-right: 10px;
+}
+
+
+
+.thirdRow .location  {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 47px;
+    margin-right: 25px;
+}
+
+.thirdRow .location img{
+    margin-right: 10px;
 }

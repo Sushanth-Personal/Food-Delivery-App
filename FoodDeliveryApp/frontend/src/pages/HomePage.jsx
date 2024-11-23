@@ -3,16 +3,21 @@
 import styles from "./styles/homepage.module.css";
 import HeaderDesktop from "../components/HeaderDesktop/HeaderDesktop";
 import NavBar from "../components/NavBar/NavBar";
+import NavBarMobile from "../components/NavBarMobile/NavBarMobile";
+import useScreenType from "../customHook/useScreenType";
 const HomePage = () => {
   // const navigate = useNavigate();
+
+  const screenType = useScreenType();
 
   return (
     <section className={styles.homePage}>
       <header>
-        <HeaderDesktop />
+        {screenType === "desktop" && <HeaderDesktop />}
       </header>
       <nav>
-        <NavBar />
+        {screenType === "desktop" && <NavBar />}
+        {screenType === "mobile" && <NavBarMobile />}
       </nav>
 
       <div className={styles.searchContainer}></div>

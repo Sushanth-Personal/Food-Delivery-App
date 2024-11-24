@@ -1,8 +1,12 @@
 import styles from "./searchpostcode.module.css";
 import useScreenType from "../../customHook/useScreenType";
+import useImage from "../../customHook/useImage";
+import {displayImage} from "../../utility/imageProcess";
 const SearchPostcode = () => {
 
     const screenType = useScreenType();
+
+    const imageURLs = useImage("page", "searchpostcode");
 
   return (
     <div className={styles.searchPostcode}>
@@ -17,33 +21,36 @@ const SearchPostcode = () => {
             </label>
             <div className={styles.search}>
               <input type="text" placeholder="e.g. EC4R 3TE"/>
-              <button>Search</button>
+              {screenType === "desktop" &&( <button>Search</button>)}
+              {screenType === "mobile" &&( <button className = {styles.mobileButton}>
+                <img src="/Next page.png" alt="" />
+              </button>)}
             </div>
           </div>
         </div>
         <img
           className={styles.girlEating}
-          src="./girleating.png"
+          src={displayImage(imageURLs, "searchpostcode-inputarea-girleating-1")}
           alt="girleating"
           id="searchpostcode-inputarea-girleating-1"
         />
         <img
           className={styles.girlLaptop}
-          src="./girllaptop.png"
+          src={displayImage(imageURLs, "searchpostcode-inputarea-girleating-2")}
           alt="girleating"
           id="searchpostcode-inputarea-girleating-2"
         />
         <div className={styles.rightContent}>
           <img
-            className={styles.rightArch}
-            src="./rightarch.png"
-            alt="rightarch"
-            id="searchpostcode-rightcontent-rightarch-1"
+            className={styles.rightArc}
+            src={displayImage(imageURLs, "searchpostcode-rightcontent-rightarc-1")}
+            alt="rightarc"
+            id="searchpostcode-rightcontent-rightarc-1"
           />
           <div className={styles.group1}>
 
             <img
-              src="./group1.png"
+              src={displayImage(imageURLs, "searchpostcode-rightcontent-group-1")}
               alt="group"
               id="searchpostcode-rightcontent-group-1"
             />
@@ -51,7 +58,7 @@ const SearchPostcode = () => {
             <h2>Awaiting Restaurant acceptance </h2>
             <img
               className={styles.tracking}
-              src="./Tracking.png"
+              src={displayImage(imageURLs, "searchpostcode-group1-tracking-1")}
               alt="tracking"
               id="searchpostcode-group1-tracking-1"
             />
@@ -60,20 +67,20 @@ const SearchPostcode = () => {
             <h1>Order Accepted! </h1>
             <h2>Your order will be delivered shortly</h2>
             <img
-              src="./group2.png"
+              src={displayImage(imageURLs, "searchpostcode-rightcontent-group-2")}
               alt="group"
               id="searchpostcode-rightcontent-group-2"
             />
             <img
               className={styles.tick}
-              src="./Tick Box.png"
+              src={displayImage(imageURLs, "searchpostcode-group2-tick-1")}
               alt="tick"
               id="searchpostcode-group2-tick-1"
             />
           </div>
           <div className={styles.group3}>
             <img
-              src="./group3.png"
+              src={displayImage(imageURLs, "searchpostcode-rightcontent-group-3")}
               alt="group"
               id="searchpostcode-rightcontent-group-3"
             />

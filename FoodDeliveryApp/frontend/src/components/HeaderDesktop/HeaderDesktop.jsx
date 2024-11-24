@@ -1,5 +1,8 @@
 import styles from "./headerdesktop.module.css";
+import useImage from "../../customHook/useImage";
+import { displayImage } from "../../utility/imageProcess";
 const HeaderDesktop = () => {
+  const imageURLs = useImage("page", "headerdesktop");
   return (
     <div className={styles.header}>
       <div className={styles.promo}>
@@ -10,7 +13,7 @@ const HeaderDesktop = () => {
 
       <div className={styles.location}>
         <img
-          src="/Location.png"
+          src={displayImage(imageURLs, "headerdesktop-location-location-1")}
           alt="location"
           id="headerdesktop-location-location-1"
         />
@@ -21,7 +24,7 @@ const HeaderDesktop = () => {
         <button>
           <div className={styles.leftSide}>
             <img
-              src="/cartIcon.png"
+              src={displayImage(imageURLs, "headerdesktop-cart-cart-1")}
               alt="cart"
               id="headerdesktop-cart-cart-1"
             />
@@ -33,7 +36,7 @@ const HeaderDesktop = () => {
             <div></div>
             <div className = {styles.forwardButton}>
               <img
-              src="./Forward Button.png"
+              src={displayImage(imageURLs, "headerdesktop-cartForwardButton-forwardButton-1")}
               alt="forwardButton"
               id="headerdesktop-cartForwardButton-forwardButton-1"
             />

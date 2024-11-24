@@ -1,23 +1,24 @@
 import styles from "./navbarmobile.module.css";
 import useImage from "../../customHook/useImage";
+import {displayImage} from "../../utility/imageProcess";
 
 const NavBarMobile = () => {
-  const logoURL = useImage("id", "login-loginForm-logo-1");
+  const imageURLs= useImage("page", "navbar");
 
   return (
     <div className={styles.navbar}>
       <div className = {styles.firstRow}>
         <div className={styles.logo}>
           <img
-            src={logoURL.imageURL}
+            src={displayImage(imageURLs, "navbar-logo-logo-1")}
             className={styles.logoURL}
-            alt=""
-            id="login-loginForm-logo-1"
+            alt="logo"
+            id="navbar-logo-logo-1"
           />
         </div>
         <div className={styles.menu}>
           <button>
-            <img src="./Menu.png" alt="menu" id="navbar-menu-menu-1" />
+            <img src={displayImage(imageURLs, "navbar-menu-menu-1")} alt="menu" id="navbar-menu-menu-1" />
           </button>
         </div>
       </div>
@@ -25,7 +26,7 @@ const NavBarMobile = () => {
         <div className={styles.loginSign}>
           <button>
             <img
-              src="./Male User.png"
+              src={displayImage(imageURLs, "navbar-loginSign-maleuser-1")}
               alt="maleuser"
               id="navbar-loginSign-maleuser-1"
             />
@@ -35,9 +36,9 @@ const NavBarMobile = () => {
         <div className={styles.cart}>
           <button>
             <img
-              src="/cartIcon.png"
+              src={displayImage(imageURLs, "navbar-cart-cart-1")}
               alt="cart"
-              id="headerdesktop-cart-cart-1"
+              id="navbar-cart-cart-1"
             />
             <h3>My Cart</h3>
           </button>
@@ -46,9 +47,9 @@ const NavBarMobile = () => {
       <div className = {styles.thirdRow}>
         <div className={styles.location}>
           <img
-            src="/Location.png"
+            src={displayImage(imageURLs, "navbar-location-location-1")}
             alt="location"
-            id="headerdesktop-location-location-1"
+            id="navbar-location-location-1"
           />
           <h3>
           Lution Street, N4G-00....

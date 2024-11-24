@@ -4,6 +4,7 @@
 .footer {
   display: flex;
   flex-direction: column;
+  max-width: 1528px;
 }
 
 .upperSection {
@@ -125,7 +126,7 @@
   font-weight: 500;
   cursor: default;
   pointer-events: none;
-  transform: translate(-80px);
+  transform: translate(-50px);
 }
 
 .bottomSection {
@@ -168,7 +169,27 @@ justify-self: flex-end;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
+  
+  .emailSubscribe input{
+    width: 80%;
+  }
+  .bottomSection{
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem 32px
+  }
 
+}
+
+@media screen and (max-width: 1080px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  
+  .emailSubscribe input{
+    width: 80%;
+  }
   .bottomSection{
     flex-direction: column;
     gap: 20px;
@@ -181,6 +202,10 @@ justify-self: flex-end;
   .footerContent {
     grid-template-columns: 1fr;
     gap: 45px;
+  }
+
+  .emailSubscribe input{
+    max-width: 450px;
   }
 
   .terms{

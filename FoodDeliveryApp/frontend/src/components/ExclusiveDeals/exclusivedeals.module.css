@@ -1,0 +1,227 @@
+.exclusiveDeals::-webkit-scrollbar {
+  /* scrollbar-color:transparent transparent; */
+  display: none;
+}
+
+.exclusiveDeals {
+  height: 428px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1528px;
+}
+
+.exclusiveDeals nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.exclusiveDeals nav .title{
+  flex:1;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.exclusiveDeals nav.rightTray{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.exclusiveDeals nav .rightTray .large{
+  padding:1.9rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left:40px;
+}
+
+.exclusiveDeals nav .rightTray .small{
+  padding:1.9rem 3.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left:40px;
+}
+
+.exclusiveDeals nav .rightTray button{
+  background-color: transparent;
+  border:none;
+}
+
+.exclusiveDeals nav .rightTray button:hover{
+  border:1px solid #FC8A06;
+  color:#FC8A06;
+  border-radius: 120px;
+  font-weight: 600;
+}
+
+.cardsContainer {
+  height: 325px;
+  width: 100%;
+}
+
+.cardsContainer .cardsViewPort {
+  position: relative;
+  height: 325px;
+}
+
+.cardsContainer .cardsViewPort ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll; /* Enables horizontal scrolling */
+  overflow-y: hidden; /* Disables vertical scrolling */
+}
+
+.cardsContainer .cardsViewPort ul li {
+  width: 496px; /* Each card's width */
+  height: 325px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  position: relative;
+}
+
+.cardsContainer .cardsViewPort ul li img {
+  width: 496px;
+  height: 325px;
+  border-radius: 12px;
+}
+
+.gradientbox {
+  display: inline-block;
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  background: -moz-linear-gradient(right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  background: -ms-linear-gradient(right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  width: 100%; /* Ensure it takes up full width of the image */
+  height: 100%; /* Ensure it takes up full height of the image */
+  border-radius: 12px;
+}
+
+.gradientbox img {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.gradientbox .discountBox {
+  background-color: #03081F;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  width:88px;
+  height: 66px;
+  border-radius: 0px 0px 12px 12px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+ .exclusiveDeals nav .title{
+  flex:3;
+}
+
+.exclusiveDeals nav .rightTray{
+  flex:1;
+}
+
+.exclusiveDeals nav .rightTray .large{
+  box-sizing:content-box;
+  width: 132px;
+  border:1px solid #03081F;
+  color:#03081F;
+  border-radius: 120px;
+  padding:1.9rem 3rem;
+}
+.exclusiveDeals nav .rightTray .small{
+ 
+ display: none;
+}
+  
+}
+
+@media screen and (max-width: 950px) {
+  .cardsContainer .cardsViewPort{
+    padding-left:14px;
+  }
+
+  .exclusiveDeals nav{
+    margin-top: 30px;
+  }
+.exclusiveDeals nav .title{
+  
+  font-size: 3rem;
+  position: absolute;
+  left:42px;
+  top:5px;
+ 
+}
+
+.exclusiveDeals nav{
+  position: relative;
+}
+
+.exclusiveDeals nav .rightTray .large{
+  box-sizing:content-box;
+  width: 132px;
+  padding: 1.9rem 1.5rem;
+  position: absolute;
+  right: 21px;
+  top:0;
+}
+
+
+}
+
+@media screen and (max-width: 700px) {
+  .exclusiveDeals nav .title{
+    font-size: 1.6rem;
+    left:21px;
+    top:25px;
+
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .exclusiveDeals nav .title{
+    font-size: 1.6rem;
+    left:14px;
+    top:25px;
+  }
+.exclusiveDeals nav .rightTray .large{
+  font-size: 1rem;
+  right:14px;
+  box-sizing:border-box;
+  width: 132px; 
+  padding:1rem 1.5rem;
+  top:20px;
+}
+
+  .exclusiveDeals .cardsContainer .cardsViewPort ul li{
+    width: 150px;
+    height: 150px;
+    margin-right: 14px;
+    border-radius: 12px;
+  }
+  .cardsContainer .cardsViewPort ul li img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+  }
+
+  .cardsContainer .cardsViewPort{
+    padding-left:14px;
+  }
+}

@@ -7,6 +7,7 @@ import NavBarMobile from "../components/NavBarMobile/NavBarMobile";
 import useScreenType from "../customHook/useScreenType";
 import SearchPostCode from "../components/SearchPostcode/SearchPostcode";
 import FooterComponent from "../components/FooterComponent/FooterComponent";
+import ExclusiveDeals from "../components/ExclusiveDeals/ExclusiveDeals";
 const HomePage = () => {
   // const navigate = useNavigate();
 
@@ -21,11 +22,12 @@ const HomePage = () => {
         {screenType === "desktop" && <NavBar />}
         {screenType === "mobile" && <NavBarMobile />}
       </nav>
-      <div>
+      <div className = {styles.searchContainer}>
         <SearchPostCode />
       </div>
-      <div className={styles.searchContainer}></div>
-      <div className={styles.exclusiveDealsContainer}></div>
+      <div className={styles.exclusiveDealsContainer}>
+        <ExclusiveDeals />
+      </div>
       <div className={styles.categoryContainer}></div>
       <div className={styles.popularRestaurants}></div>
       <div className={styles.adContainer}></div>

@@ -6,11 +6,24 @@ html{
 }
 
 
+.searchContainer{
+    margin-bottom:53px;
+}
+.exclusiveDealsContainer{
+    margin-bottom:53px;
+}
+
 @media screen and (max-width: 1250px) {
     html{
         font-size: 62.5%;
     }
 
+}
+
+@media screen and (max-width: 1150px) {
+    .homePage{
+        padding: 0 5rem;
+    }
 }
 
 @media screen and (max-width: 950px) {

@@ -2,6 +2,9 @@
   background-color: #fbfbfb;
   padding-top: 45px;
   height: 610px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left:57px;
+  max-width: 1528px;
 }
 
 .content {
@@ -216,11 +219,16 @@
     transform: scaleX(0.8);
     right: -63px;
   }
+
+  .searchPostcode{
+    padding-left:20px;
+  }
 }
 @media screen and (max-width: 1080px) {
   .content .rightContent {
     display: none;
   }
+
 
   .content {
     display: flex;
@@ -231,7 +239,8 @@
 
   .searchPostcode {
     height: 283px;
-    
+    border:none;
+    padding:0;
   }
 
   .content {

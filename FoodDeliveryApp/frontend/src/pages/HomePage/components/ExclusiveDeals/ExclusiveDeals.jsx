@@ -1,7 +1,7 @@
 import styles from "./exclusivedeals.module.css";
-import useScreenType from "../../customHook/useScreenType";
-import useImage from "../../customHook/useImage";
-import {displayImage} from "../../utility/imageProcess";
+import useScreenType from "../../../../customHook/useScreenType";
+import useImage from "../../../../customHook/useImage";
+import {displayImage} from "../../../../utility/imageProcess";
 
 const ExclusiveDeals = () => {
 

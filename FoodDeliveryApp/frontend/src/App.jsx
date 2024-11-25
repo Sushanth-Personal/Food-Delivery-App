@@ -6,7 +6,7 @@ import {
 
 // Import your components for the pages
 import LoginPage from "./pages/LoginPage"; // Assume you have a LoginPage component
-import HomePage from "./pages/HomePage"; // Assume you have a HomePage component
+import HomePage from "./pages/HomePage/HomePage"; // Assume you have a HomePage component
 import RegisterPage from "./pages/RegisterPage";
 
 function App() {

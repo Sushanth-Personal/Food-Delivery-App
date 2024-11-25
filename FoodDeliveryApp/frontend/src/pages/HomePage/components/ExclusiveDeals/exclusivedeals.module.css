@@ -236,6 +236,7 @@
     width: 150px;
     margin-right: 14px;
     border-radius: 12px;
+    height:250px;
   }
   .cardsContainer .cardsViewPort ul li img {
     width: 150px;
@@ -253,15 +254,18 @@
   .gradientbox .restaurantName {
     top: 160px;
     left: 10px;
+    height: 100px;
   }
 
   .gradientbox .restaurantName h2 {
     font-size: 1.3rem;
+    margin:0;
   }
 
   .gradientbox .restaurantName h1 {
     font-size: 1.4rem;
     color: #03081f;
+    margin:0;
   }
 
   .gradientbox .discountBox {

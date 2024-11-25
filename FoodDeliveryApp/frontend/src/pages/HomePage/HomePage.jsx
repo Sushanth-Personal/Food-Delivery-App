@@ -1,13 +1,14 @@
 // import { useNavigate } from "react-router-dom";
 // import { useEffect } from "react";
-import styles from "./styles/homepage.module.css";
-import HeaderDesktop from "../components/HeaderDesktop/HeaderDesktop";
-import NavBar from "../components/NavBar/NavBar";
-import NavBarMobile from "../components/NavBarMobile/NavBarMobile";
-import useScreenType from "../customHook/useScreenType";
-import SearchPostCode from "../components/SearchPostcode/SearchPostcode";
-import FooterComponent from "../components/FooterComponent/FooterComponent";
-import ExclusiveDeals from "../components/ExclusiveDeals/ExclusiveDeals";
+import styles from "./homepage.module.css";
+import HeaderDesktop from "../../components/HeaderDesktop/HeaderDesktop";
+import NavBar from "../../components/NavBar/NavBar";
+import NavBarMobile from "../../components/NavBarMobile/NavBarMobile";
+import useScreenType from "../../customHook/useScreenType";
+import SearchPostCode from "./components/SearchPostcode/SearchPostcode";
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
+import ExclusiveDeals from "./components/ExclusiveDeals/ExclusiveDeals";
+import PopularCategory from "./components/PopularCategory/PopularCategory";
 const HomePage = () => {
   // const navigate = useNavigate();
 
@@ -28,7 +29,9 @@ const HomePage = () => {
       <div className={styles.exclusiveDealsContainer}>
         <ExclusiveDeals />
       </div>
-      <div className={styles.categoryContainer}></div>
+      <div className={styles.categoryContainer}>
+        <PopularCategory />
+      </div>
       <div className={styles.popularRestaurants}></div>
       <div className={styles.adContainer}></div>
       <div className={styles.signUpContainer}></div>

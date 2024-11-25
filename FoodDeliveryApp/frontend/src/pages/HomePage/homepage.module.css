@@ -13,6 +13,10 @@ html{
     margin-bottom:53px;
 }
 
+.categoryContainer{
+    margin-bottom:53px;
+}
+
 @media screen and (max-width: 1250px) {
     html{
         font-size: 62.5%;
@@ -36,6 +40,7 @@ html{
 @media screen and (max-width: 768px) {
   .exclusiveDealsContainer{
     margin-bottom: 30px;
+    height: 250px;
   }
   .searchContainer{
     margin-bottom:30px;

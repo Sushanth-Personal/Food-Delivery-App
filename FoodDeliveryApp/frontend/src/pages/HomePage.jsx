@@ -20,7 +20,7 @@ const HomePage = () => {
       </header>
       <nav>
         {screenType === "desktop" && <NavBar />}
-        {screenType === "mobile" && <NavBarMobile />}
+        {(screenType === "tablet"|| screenType === "mobile") && <NavBarMobile />}
       </nav>
       <div className = {styles.searchContainer}>
         <SearchPostCode />

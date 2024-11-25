@@ -294,7 +294,10 @@
         padding: 0px 11px;
     }
 
-
+    .inputArea h3 {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
     
     .inputArea .search .mobileButton{
         padding: 1.2rem 1.2rem;

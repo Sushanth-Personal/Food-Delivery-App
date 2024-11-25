@@ -22,7 +22,7 @@ const SearchPostcode = () => {
             <div className={styles.search}>
               <input type="text" placeholder="e.g. EC4R 3TE"/>
               {screenType === "desktop" &&( <button>Search</button>)}
-              {screenType === "mobile" &&( <button className = {styles.mobileButton}>
+              {(screenType === "mobile" || screenType === "tablet")&&( <button className = {styles.mobileButton}>
                 <img src={displayImage(imageURLs,"searchpostcode-search-button-1")} alt="button" id="searchpostcode-search-button-1" />
               </button>)}
             </div>

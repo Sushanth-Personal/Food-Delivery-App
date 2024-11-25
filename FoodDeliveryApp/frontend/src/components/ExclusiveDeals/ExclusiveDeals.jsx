@@ -14,7 +14,7 @@ const ExclusiveDeals = () => {
         {screenType === "desktop" &&(<div className={styles.title}>
           Up to -40% 🎊 Order.uk exclusive deals
         </div>)}
-        {screenType === "mobile" &&(<div className={styles.title}>
+        {(screenType === "mobile" || screenType === "tablet") &&(<div className={styles.title}>
           Up to -40% Discount Offers 🎊 
         </div>)}
         
@@ -34,6 +34,12 @@ const ExclusiveDeals = () => {
                 <div className={styles.discountBox}>
                   -40%
                 </div>
+                {(screenType === "desktop"||screenType === "tablet") &&(
+                  <div className = {styles.restaurantName}>
+                  <h2>Restaurant</h2>
+                  <h1>Butterbrot Caf’e London</h1>
+                </div>
+                )}
               </div>
             </li>
             <li>
@@ -42,6 +48,12 @@ const ExclusiveDeals = () => {
                 <div className={styles.discountBox}>
                   -40%
                 </div>
+                {(screenType === "desktop"||screenType === "tablet") &&(
+                  <div className = {styles.restaurantName}>
+                  <h2>Restaurant</h2>
+                  <h1>Grand Caf’e </h1>
+                </div>
+                )}
               </div>
             </li>
             <li>
@@ -50,6 +62,43 @@ const ExclusiveDeals = () => {
                 <div className={styles.discountBox}>
                   -40%
                 </div>
+                {(screenType === "desktop"||screenType === "tablet") &&(
+                  <div className = {styles.restaurantName}>
+                  <h2>Restaurant</h2>
+                  <h1>Chef Burgers London</h1>
+                </div>
+                )}
+                
+              </div>
+            </li>
+            <li>
+              <div className={styles.gradientbox}>
+                <img id="exclusivedeals-cardsviewport-tile-4"  src={displayImage(imageURLs, "exclusivedeals-cardsviewport-tile-4")} alt="tile" />
+                <div className={styles.discountBox}>
+                  -40%
+                </div>
+                {(screenType === "desktop"||screenType === "tablet") &&(
+                  <div className = {styles.restaurantName}>
+                  <h2>Restaurant</h2>
+                  <h1>Butterbrot Caf’e London</h1>
+                </div>
+                )}
+                
+              </div>
+            </li>
+            <li>
+              <div className={styles.gradientbox}>
+                <img id="exclusivedeals-cardsviewport-tile-5"  src={displayImage(imageURLs, "exclusivedeals-cardsviewport-tile-5")} alt="tile" />
+                <div className={styles.discountBox}>
+                  -40%
+                </div>
+                {(screenType === "desktop"||screenType === "tablet") &&(
+                  <div className = {styles.restaurantName}>
+                  <h2>Restaurant</h2>
+                  <h1>Grand Ai Cafe London</h1>
+                </div>
+                )}
+                
               </div>
             </li>
           </ul>

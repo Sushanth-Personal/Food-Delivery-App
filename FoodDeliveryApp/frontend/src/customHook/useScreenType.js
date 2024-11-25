@@ -7,10 +7,13 @@ const useScreenType = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 950) {
+      if (window.innerWidth < 768) {
         setScreenType("mobile");
       } else {
         setScreenType("desktop");
+      }
+      if(window.innerWidth < 950){
+        setScreenType("tablet");
       }
     };
 
@@ -21,7 +24,7 @@ const useScreenType = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [screenType]);
 
   return screenType;
 };

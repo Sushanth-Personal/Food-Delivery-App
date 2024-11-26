@@ -4,7 +4,9 @@ html{
 .homePage{
     padding:0 10rem;
 }
-
+.downloadApp{
+    margin-bottom:53px;;
+}
 
 .searchContainer{
     margin-bottom:53px;
@@ -43,6 +45,9 @@ html{
     height: 250px;
   }
   .searchContainer{
+    margin-bottom:30px;
+}
+.downloadApp{
     margin-bottom:30px;
 }
 }

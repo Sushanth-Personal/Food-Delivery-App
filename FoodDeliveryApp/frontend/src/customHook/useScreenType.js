@@ -5,6 +5,8 @@ const useScreenType = () => {
     window.innerWidth < 950 ? "mobile" : "desktop"
   );
 
+
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {

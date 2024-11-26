@@ -18,7 +18,7 @@
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   width: 100%;
   /* border: 1px solid black; */
@@ -35,6 +35,16 @@
   align-items: center;
   cursor: pointer;
   margin: 10px;
+}
+
+.container .lastTile{
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.container .firstTile{
+  margin-left: 0px;
+  margin-right: 10px;
 }
 
 .container .tile img {
@@ -69,6 +79,15 @@
   margin-left: 10px;
 }
 
+@media  screen and (max-width: 1710px) {
+  .container {
+
+    flex-wrap: wrap;
+ 
+    /* border: 1px solid black; */
+  }
+}
+
 @media screen and (max-width: 950px) {
     .popularCategory .content h1{
         margin-left: 40px;
@@ -79,6 +98,8 @@
   .container {
     justify-content: center;
   }
+
+
 
   .popularCategory .content h1 {
     margin-left: 21px;

@@ -10,7 +10,7 @@ const PopularCategory = () => {
       <div className = {styles.content}>
         <h1>Order.uk Popular Categories 🤩</h1>
         <div className={styles.container}>
-          <div className={styles.tile}>
+          <div className={`${styles.tile} ${styles.firstTile}`}>
             <img
             id="popularcategory-tile-category-1"
             src={displayImage(imageURLs, "popularcategory-tile-category-1")} alt="category" />
@@ -55,7 +55,8 @@ const PopularCategory = () => {
               <h2>29 Restaurants</h2>
             </div>
           </div>
-          <div className={styles.tile}>
+          <div className={`${styles.tile} ${styles.lastTile}`}>
+
             <img
              id="popularcategory-tile-category-6"
             src={displayImage(imageURLs, "popularcategory-tile-category-6")} alt="category" />

@@ -1,0 +1,245 @@
+
+
+.DownloadApp {
+    width: 100%;
+    height: 661px;
+    border: none;
+    border-radius: 12px;
+    max-width: 1528px;
+  }
+  
+  .mainContainer {
+    width: 100%;
+    height: 90%;
+    background-color: rgba(217, 217, 217, 0.6);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .topLayer{
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 110%;
+    display: flex;
+  }
+
+  .bottomLayer{
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .topLayer .leftContent{
+    flex:5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topLayer .rightContent{
+    flex:4;
+    width: 700px;
+    height: 100%;
+  }
+
+  .bottomLayer .leftContent{
+    flex:1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bottomLayer .rightContent{
+    flex:3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding:122px 4% 0px 0px;
+  }
+
+  .topLayer .leftContent img{
+    width: 100%;
+  }
+
+  .bottomLayer .rightContent .appstore{
+    margin-right: 120px;
+  }
+
+  .bottomLayer .rightContent .line1{
+    width: 800px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    
+}
+
+.bottomLayer .rightContent .line1 h1{
+    font-size: 6.8rem;
+    font-weight: 700;
+    color: #03081f;
+    margin: 0px;
+}
+
+.bottomLayer .rightContent .line1 img{
+    max-height: 66px;
+    margin-top: 12px;
+
+}
+
+.bottomLayer .rightContent .blackBar{
+    width: 878px;
+    height: 90px;
+    background-color: #03081f;
+    border-radius: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.blackBar h1{
+    font-size: 5.4rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #FC8A06;
+    margin: 0px;
+}
+
+.blackBar h2{
+    font-size: 5.4rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: white;
+    margin: 0px;
+    width: 250px;
+    margin-right: 59px;
+}
+
+.bottomLayer .rightContent .line3{
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin:20px 68px;
+}
+
+
+
+
+
+@media screen and (max-width: 1550px ){
+    .topLayer .leftContent img{
+        width: 80%;
+      }
+    
+}
+
+@media screen and (max-width: 1500px ){
+    .topLayer .leftContent img{
+        width:511px;
+      }
+    
+}
+
+
+@media screen and (max-width: 1350px ){
+  .DownloadApp {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    max-width: 1528px;
+    box-sizing: border-box;
+  }
+  .mobileContainer{
+    width: 100%;
+    background-color: rgba(217, 217, 217);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .mobileContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  .upperContent{
+    margin-top: 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  
+  .upperContent .line1{
+    display: flex;
+    margin-bottom: 13px;
+  }
+
+  .upperContent .line1 img{
+    height: 27px;
+    width: 110px;
+  }
+
+  .upperContent  .line2{
+    display: flex;
+    margin-bottom: 13px;
+  }
+
+  .upperContent .line2 h1{
+    font-size: 2.4rem;
+    font-weight: 500;
+    color:#FC8A06;
+    text-decoration: underline;
+  }
+
+  .upperContent .line2 h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+    color:#03081f;
+    margin-left: 12px;
+  }
+
+
+  .upperContent .line3{
+    display: flex;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+ .upperContent .line4{
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .upperContent .line4 img{
+    height: 42px;
+    width: 284px;
+  }
+ 
+  .friends{
+    max-width: 80%;
+    height: auto;
+  }
+  
+}

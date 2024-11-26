@@ -9,6 +9,7 @@ import SearchPostCode from "./components/SearchPostcode/SearchPostcode";
 import FooterComponent from "../../components/FooterComponent/FooterComponent";
 import ExclusiveDeals from "./components/ExclusiveDeals/ExclusiveDeals";
 import PopularCategory from "./components/PopularCategory/PopularCategory";
+import DownloadApp from "./components/DownloadApp/DownloadApp";
 const HomePage = () => {
   // const navigate = useNavigate();
 
@@ -33,7 +34,9 @@ const HomePage = () => {
         <PopularCategory />
       </div>
       <div className={styles.popularRestaurants}></div>
-      <div className={styles.adContainer}></div>
+      <div className={styles.downloadApp}>
+        <DownloadApp />
+      </div>
       <div className={styles.signUpContainer}></div>
       <div className={styles.aboutUsContainer}></div>
       <div className={styles.statisticsContainer}></div>

@@ -20,6 +20,10 @@ html{
     margin-bottom:53px;
 }
 
+.popularRestaurants{
+    margin-bottom:53px;
+}
+
 @media screen and (max-width: 1250px) {
     html{
         font-size: 62.5%;
@@ -49,6 +53,9 @@ html{
     margin-bottom:30px;
 }
 .downloadApp{
+    margin-bottom:30px;
+}
+.popularRestaurants{
     margin-bottom:30px;
 }
 }

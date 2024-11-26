@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width: 1528px;
+  /* max-width: 1528px; */
 }
 
 .exclusiveDeals nav {

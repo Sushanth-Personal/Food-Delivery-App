@@ -5,7 +5,7 @@
     height: 661px;
     border: none;
     border-radius: 12px;
-    max-width: 1528px;
+    /* max-width: 1528px; */
   }
   
   .mainContainer {
@@ -71,7 +71,8 @@
   }
 
   .topLayer .leftContent img{
-    width: 100%;
+   max-width: 100%;
+   height:auto;
   }
 
   .bottomLayer .rightContent .appstore{

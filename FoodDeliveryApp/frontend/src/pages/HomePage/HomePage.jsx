@@ -10,6 +10,7 @@ import FooterComponent from "../../components/FooterComponent/FooterComponent";
 import ExclusiveDeals from "./components/ExclusiveDeals/ExclusiveDeals";
 import PopularCategory from "./components/PopularCategory/PopularCategory";
 import DownloadApp from "./components/DownloadApp/DownloadApp";
+import PopularRestaurant from "./components/PopularRestaurants/PopularRestaurants";
 const HomePage = () => {
   // const navigate = useNavigate();
 
@@ -17,30 +18,36 @@ const HomePage = () => {
 
   return (
     <section className={styles.homePage}>
-      <header>
-        {screenType === "desktop" && <HeaderDesktop />}
-      </header>
-      <nav>
-        {screenType === "desktop" && <NavBar />}
-        {(screenType === "tablet"|| screenType === "mobile") && <NavBarMobile />}
-      </nav>
-      <div className = {styles.searchContainer}>
-        <SearchPostCode />
+      <div className = {styles.content}>
+        <header>{screenType === "desktop" && <HeaderDesktop />}</header>
+        <nav>
+          {screenType === "desktop" && <NavBar />}
+          {(screenType === "tablet" || screenType === "mobile") && (
+            <NavBarMobile />
+          )}
+        </nav>
+        <div className={styles.searchContainer}>
+          <SearchPostCode />
+        </div>
+        <div className={styles.exclusiveDealsContainer}>
+          <ExclusiveDeals />
+        </div>
+        <div className={styles.categoryContainer}>
+          <PopularCategory />
+        </div>
+        <div className={styles.popularRestaurants}>
+          <PopularRestaurant />
+        </div>
+        <div className={styles.downloadApp}>
+          <DownloadApp />
+        </div>
+        <div className={styles.signUpContainer}></div>
+        <div className={styles.aboutUsContainer}></div>
+        <div className={styles.statisticsContainer}></div>
+        <footer>
+          <FooterComponent />
+        </footer>
       </div>
-      <div className={styles.exclusiveDealsContainer}>
-        <ExclusiveDeals />
-      </div>
-      <div className={styles.categoryContainer}>
-        <PopularCategory />
-      </div>
-      <div className={styles.popularRestaurants}></div>
-      <div className={styles.downloadApp}>
-        <DownloadApp />
-      </div>
-      <div className={styles.signUpContainer}></div>
-      <div className={styles.aboutUsContainer}></div>
-      <div className={styles.statisticsContainer}></div>
-      <footer><FooterComponent /></footer>
     </section>
   );
 };

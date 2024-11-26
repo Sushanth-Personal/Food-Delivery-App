@@ -6,7 +6,7 @@ import {
   getImageById,
 } from "../api/imageAPI";
 
-const useImage = (type, value) => {
+const useImage = (type, value, security) => {
   const [imageURLs, setImageURLs] = useState([]); // State to store image URLs
 
   useEffect(() => {
@@ -17,16 +17,16 @@ const useImage = (type, value) => {
         let images = [];
         switch (type) {
           case "page":
-            images = await getImageByPage(value);
+            images = await getImageByPage(value, security);
             break;
           case "container":
-            images = await getImageByContainer(value);
+            images = await getImageByContainer(value, security);
             break;
           case "altText":
-            images = await getImageByAltText(value);
+            images = await getImageByAltText(value, security);
             break;
           case "id":
-            images = await getImageById(value);
+            images = await getImageById(value,security);
             break;
           default:
             images = [];

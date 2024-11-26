@@ -21,7 +21,7 @@ const authenticateToken = async (req, res, next) => {
 
     // Attach user info to the request object
     req.user = decodedAccess;
-
+    
     // Proceed to the next middleware or route handler
     return next();
   } catch (error) {

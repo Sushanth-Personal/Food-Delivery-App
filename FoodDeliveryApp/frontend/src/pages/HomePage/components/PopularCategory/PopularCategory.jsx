@@ -3,7 +3,7 @@ import useImage from "../../../../customHook/useImage";
 import {displayImage} from "../../../../utility/imageProcess";
 const PopularCategory = () => {
 
-    const imageURLs = useImage("page","popularcategory");
+    const imageURLs = useImage("page","popularcategory","protected");
     
   return (
     <section className={styles.popularCategory}>

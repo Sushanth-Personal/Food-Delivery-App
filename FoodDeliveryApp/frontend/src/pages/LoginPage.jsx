@@ -5,6 +5,8 @@ import useImage from "../customHook/useImage";
 import { displayImage } from "../utility/imageProcess";
 import { useNavigate } from "react-router-dom";
 import {  validateEmail, validatePassword } from "../errorHandler/inputError";
+import {loginUser} from "../api/imageAPI";
+import {useEffect} from "react";
 const LoginPage = () => {
   //hooks
   const [userData, setUserData] = useState({
@@ -12,10 +14,12 @@ const LoginPage = () => {
     password: "",
   });
 
+
   // Use the custom hook to fetch image URLs
   const imageURLs = useImage("page", "login");
 
   const navigate = useNavigate(); // useNavigate hook
+
 
   const [errors, setErrors] = useState({
     email: "",
@@ -23,41 +27,51 @@ const LoginPage = () => {
   });
 
   const handleChange = (e) => {
-    e.preventDefault();
+    const { name, value } = e.target;
     setUserData({
       ...userData,
-      [e.target.name]: e.target.value,
+      [name]: value, // Update the field dynamically based on its name
     });
   };
-
-  const handlePasswordBlur= (e) => {
-    const { value } = e.target;
-    const { value: updatedPassword, error } = validatePassword(value);
   
-    setUserData({
-      ...userData,
-      password: updatedPassword,
-    });
-  
-    setErrors({
-      ...errors,
-      password: error,
-    });
-  };
-  // Handle email validation on blur (focus out)
   const handleEmailBlur = () => {
-    const { value, error } = validateEmail(userData.email);
-    
-    setUserData({
-      ...userData,
-      email: value,
-    });
-    
+    const { error } = validateEmail(userData.email); // Validate email without overwriting the input value
+  
     setErrors({
       ...errors,
-      email: error,
+      email: error, // Set only the error message
     });
   };
+  
+  const handlePasswordBlur = () => {
+    const { error } = validatePassword(userData.password); // Validate password without overwriting the input value
+  
+    setErrors({
+      ...errors,
+      password: error, // Set only the error message
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await loginUser(userData.email, userData.password);
+
+      if (response.message === "Success") {
+        const lastRoute = sessionStorage.getItem("lastRoute");
+      if (lastRoute) {
+        console.log("navigating to last route:", lastRoute);
+        navigate(lastRoute);
+      }else{
+        navigate("/");
+      }
+      } else {
+        console.error("Login failed:", response.message);
+      }
+  }catch (error) {
+      console.error("Error logging in:", error);
+    }
+  };
+    
 
   return (
     <section className={styles.login}>
@@ -84,6 +98,7 @@ const LoginPage = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Example@email.com"
                     value={userData.email}
                     onChange={handleChange}
@@ -98,6 +113,7 @@ const LoginPage = () => {
                   <label htmlFor="password">Password</label>
                   <input
                     type="password"
+                    name="password"
                     value={userData.password}
                     id="password"
                     placeholder="At least 8 characters"
@@ -109,7 +125,7 @@ const LoginPage = () => {
                   )}
                 </div>
                 <h4>Forgot Password?</h4>
-                <button>Sign in</button>
+                <button onClick={handleSubmit}>Sign in</button>
                 <h3>
                   Don't you have an account?
                   <a href="#" onClick={() => navigate("/register")}> Sign up</a>

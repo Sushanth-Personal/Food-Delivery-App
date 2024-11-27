@@ -1,5 +1,5 @@
 // import { useNavigate } from "react-router-dom";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import styles from "./homepage.module.css";
 import HeaderDesktop from "../../components/HeaderDesktop/HeaderDesktop";
 import NavBar from "../../components/NavBar/NavBar";
@@ -15,7 +15,11 @@ const HomePage = () => {
   // const navigate = useNavigate();
 
   const screenType = useScreenType();
-
+  useEffect(
+    ()=>{
+      sessionStorage.setItem("lastRoute", "/");
+    },
+  []);
   return (
     <section className={styles.homePage}>
       <div className={styles.content}>

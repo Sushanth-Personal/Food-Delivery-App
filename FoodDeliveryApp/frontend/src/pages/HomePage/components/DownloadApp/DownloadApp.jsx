@@ -1,16 +1,11 @@
 import styles from "./downloadapp.module.css";
-import {useEffect} from "react";
 import useScreenSize from "../../../../customHook/useScreenSize";
 import useImage from "../../../../customHook/useImage";
 import { displayImage } from "../../../../utility/ImageProcess";
 const DownloadApp = () => {
   const isMobile = useScreenSize(1350);
   const imageURLs = useImage("page", "downloadapp");
-  useEffect(
-    ()=>{
-      console.log("downloadApp",imageURLs)
-    },
-  [imageURLs]);
+
   return (
     <section className={styles.DownloadApp}>
       {!isMobile && (

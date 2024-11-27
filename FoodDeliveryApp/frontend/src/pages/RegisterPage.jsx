@@ -4,7 +4,12 @@ import { useState } from "react";
 import useImage from "../customHook/useImage";
 import { displayImage } from "../utility/imageProcess";
 import { useNavigate } from "react-router-dom";
-import { validatePhoneNumber, validateEmail, validatePassword } from "../errorHandler/inputError"; // Import validation functions
+import {
+  validatePhoneNumber,
+  validateEmail,
+  validatePassword,
+} from "../errorHandler/inputError"; // Import validation functions
+import { registerUser } from "../api/imageAPI";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -34,12 +39,12 @@ const RegisterPage = () => {
   const handlePhoneChange = (e) => {
     const { value } = e.target;
     const { value: cleanedPhone, error } = validatePhoneNumber(value);
-    
+
     setUserData({
       ...userData,
       phoneNumber: cleanedPhone,
     });
-    
+
     setErrors({
       ...errors,
       phoneNumber: error,
@@ -47,15 +52,15 @@ const RegisterPage = () => {
   };
 
   // Handle password change
-const handlePasswordBlur= (e) => {
+  const handlePasswordBlur = (e) => {
     const { value } = e.target;
     const { value: updatedPassword, error } = validatePassword(value);
-  
+
     setUserData({
       ...userData,
       password: updatedPassword,
     });
-  
+
     setErrors({
       ...errors,
       password: error,
@@ -64,16 +69,36 @@ const handlePasswordBlur= (e) => {
   // Handle email validation on blur (focus out)
   const handleEmailBlur = () => {
     const { value, error } = validateEmail(userData.email);
-    
+
     setUserData({
       ...userData,
       email: value,
     });
-    
+
     setErrors({
       ...errors,
       email: error,
     });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await registerUser(
+        userData.userName,
+        userData.phoneNumber,
+        userData.email,
+        userData.password
+      );
+
+      if (response === "Success") {
+        navigate("/login");
+      } else {
+        console.error("Registration failed:", response);
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
   };
 
   // Use the custom hook to fetch image URLs
@@ -122,7 +147,9 @@ const handlePasswordBlur= (e) => {
                     onChange={handlePhoneChange}
                   />
                   {errors.phoneNumber && (
-                    <div className={styles.error}>{errors.phoneNumber}</div>
+                    <div className={styles.error}>
+                      {errors.phoneNumber}
+                    </div>
                   )}
                 </div>
                 <div className={styles.inputGroup}>
@@ -153,14 +180,18 @@ const handlePasswordBlur= (e) => {
                     onBlur={handlePasswordBlur}
                   />
                   {errors.password && (
-                    <div className={styles.error}>{errors.password}</div>
+                    <div className={styles.error}>
+                      {errors.password}
+                    </div>
                   )}
                 </div>
                 <h4>Forgot Password?</h4>
-                <button>Sign in</button>
+                <button onClick={handleSubmit}>Continue</button>
                 <h3>
                   Already have an account?
-                  <a href="#" onClick={() => navigate("/login")}>Sign in</a>
+                  <a href="#" onClick={() => navigate("/login")}>
+                    Sign in
+                  </a>
                 </h3>
               </div>
             </div>

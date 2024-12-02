@@ -3,7 +3,7 @@ import { useUserContext } from "../Contexts/UserContext";
 
 const useCart = () => {
   // const baseURL = "http://localhost:5000";
-  const baseURL= "https://food-delivery-app-backend-murex.vercel.app"
+  const baseURL= "https://food-delivery-app-x2sv.onrender.com"
   const { userId, setCartItems, setCartTotal } = useUserContext();
   const [cartData, setCartData] = useState([]);
   const [loading, setLoading] = useState(true);

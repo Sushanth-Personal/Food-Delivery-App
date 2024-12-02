@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useRestaurant = (id) => {
-  const baseURL = "https://food-delivery-app-backend-murex.vercel.app";
+  const baseURL = "https://food-delivery-app-x2sv.onrender.com";
   // const baseURL = "http://localhost:5000";
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);

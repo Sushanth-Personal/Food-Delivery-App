@@ -17,7 +17,7 @@ const ProductDisplay = ({ restaurantId, restaurantName }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const { isCartClicked, setIsCartClicked } = useUserContext();
+  const { isCartClicked, setIsCartClicked, userId } = useUserContext();
   const isSmallScreen = useScreenSize(1180);
 
   // Custom hooks
@@ -264,7 +264,7 @@ const ProductDisplay = ({ restaurantId, restaurantName }) => {
                                   id="productdisplay-producttile-addbutton-1"
                                   role="button"
                                   onClick={() =>
-                                    handleAddToCart(product)
+                                    handleAddToCart(product,userId)
                                   }
                                   className={styles.addButton}
                                   src={displayImage(

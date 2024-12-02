@@ -1,8 +1,8 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode"; // Ensure you're using the correct import here
 
-// const baseURL = "http://localhost:5000";
-const baseURL = "https://food-delivery-app-x2sv.onrender.com";
+const baseURL = "http://localhost:5000";
+// const baseURL = "https://food-delivery-app-x2sv.onrender.com";
 
 const api = axios.create({
   baseURL: `${baseURL}`,
@@ -51,7 +51,7 @@ api.interceptors.response.use(
         const decodedToken = jwtDecode(accessToken);
         const userId = decodedToken.id; // Replace with the actual key in the decoded token
         // Store the userId (e.g., in localStorage or state)
-        localStorage.setItem('userId', userId); // Or use any other method for storage
+        localStorage.setItem("userId", userId); // Or use any other method for storage
       } catch (error) {
         console.error("Error decoding token:", error);
       }
@@ -72,11 +72,10 @@ api.interceptors.response.use(
   }
 );
 
-
 export const checkAuthentication = async () => {
   try {
     const response = await api.get("/protected/");
-    console.log("checkAuthentication" , response);
+    console.log("checkAuthentication", response);
     return response.data;
   } catch (error) {
     console.error("Error checking authentication:", error);
@@ -98,7 +97,7 @@ export const loginUser = async (email, password) => {
     console.log(response.data);
     const { user, accessToken } = response.data;
     localStorage.setItem("accessToken", accessToken);
-    
+
     return { message: "Success", user, accessToken };
   } catch (error) {
     console.error(
@@ -131,6 +130,35 @@ export const registerUser = async (
   }
 };
 
+const getMenu = async (restaurantId) => {
+  try {
+    const response = await api.get(`/menu/${restaurantId}`);
+    return response;
+  } catch (error) {
+    console.error("Error fetching menu:", error);
+  }
+};
+
+const getCart = async (userId) => {
+  try {
+    const response = await api.get(`/protected/cart/${userId}`);
+    return response;
+  } catch (error) {
+    console.error("Error fetching cart:", error);
+  }
+};
+
+const addToCart = async (userId, productId, product) => {
+  try {
+    const response = await api.post(
+      `/protected/cart/${userId}?productId=${productId}`,
+      JSON.stringify(product)
+    );
+    return response;
+  } catch (error) {
+    console.error("Error adding to cart:", error);
+  }
+};
 export const fetchUserData = async (userId) => {
   try {
     const response = await api.get(`/protected/user/${userId}`);
@@ -139,37 +167,42 @@ export const fetchUserData = async (userId) => {
   } catch (error) {
     console.error("Error fetching user data:", error);
   }
-}
+};
 
 const getCards = async (userId) => {
   try {
     const response = await api.get(`/protected/cards/${userId}`);
-    console.log("getCards", response)
+    console.log("getCards", response);
     return response.data;
   } catch (error) {
     console.error("Error fetching cards:", error);
   }
 };
 
-const deleteCard = async (userId,cardId) => {
+const deleteCard = async (userId, cardId) => {
   try {
-    const response = await api.delete(`/protected/cards/${userId}/${cardId}`);
-    console.log("deleteCards", response)
+    const response = await api.delete(
+      `/protected/cards/${userId}/${cardId}`
+    );
+    console.log("deleteCards", response);
     return response;
   } catch (error) {
     console.error("Error deleting cards:", error);
   }
-}
-const addCards = async (card,userId) => {
+};
+const addCards = async (card, userId) => {
   try {
     console.log("card", card, userId);
-    const response = await api.post(`/protected/cards/${userId}`, card);
-    console.log("addCards", response)
+    const response = await api.post(
+      `/protected/cards/${userId}`,
+      card
+    );
+    console.log("addCards", response);
     return response.data;
   } catch (error) {
     console.error("Error adding cards:", error);
   }
-}
+};
 const getImageById = async (imageId) => {
   try {
     const response = await api.get(`/image/?imageId=${imageId}`);
@@ -182,10 +215,10 @@ const getImageById = async (imageId) => {
 const getImageByProductIdArray = async (array) => {
   try {
     console.log("array", array);
-    
+
     // Join the array into a single comma-separated string
     const params = new URLSearchParams();
-    params.append('productIdArray', array.join(',')); // Joining the array into a single string
+    params.append("productIdArray", array.join(",")); // Joining the array into a single string
 
     // Make the GET request with the query parameter
     const response = await api.get(`/image?${params.toString()}`);
@@ -197,7 +230,10 @@ const getImageByProductIdArray = async (array) => {
 
 const editUserData = async (userData) => {
   try {
-    const response = await api.put(`/protected/user/${userData._id}`, userData);
+    const response = await api.put(
+      `/protected/user/${userData._id}`,
+      userData
+    );
     return response.data;
   } catch (error) {
     console.error("Error editing user data:", error);
@@ -221,7 +257,6 @@ const getImageByAltText = async (altText) => {
     console.error("Error fetching image:", error);
   }
 };
-
 
 const getImageByPage = async (page, security) => {
   try {
@@ -247,5 +282,8 @@ export {
   editUserData,
   addCards,
   getCards,
-  deleteCard
+  deleteCard,
+  getCart,
+  addToCart,
+  getMenu
 };

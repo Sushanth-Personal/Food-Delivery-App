@@ -1,20 +1,12 @@
+import {addToCart} from "../api/api";
+
 export const handleAddToCart = async (product, userId) => {
-  // const baseURL = "http://localhost:5000";
-  const baseURL = "https://food-delivery-app-x2sv.onrender.com";
-    const productId = product._id;
-    const endpoint = `${baseURL}/cart/${userId}?productId=${productId}`;
+
+    let id=userId;
+    if(!id) id=localStorage.getItem("userId");
   
     try {
-      const response = await fetch(endpoint, {
-        method: "POST", 
-        headers: {
-          "Content-Type": "application/json", 
-        },
-        body: JSON.stringify({
-          productId: productId, 
-          quantity: 1, 
-        }),
-      });
+      const response = await addToCart(id, product.product._id, product);
   
       if (response.ok) {
         const data = await response.json();

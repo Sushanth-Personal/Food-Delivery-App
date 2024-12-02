@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useUserContext } from "../Contexts/UserContext";
-
+import {getCart, addToCart} from '../api/api';
 const useCart = () => {
-  // const baseURL = "http://localhost:5000";
-  const baseURL= "https://food-delivery-app-x2sv.onrender.com"
+
   const { userId, setCartItems, setCartTotal } = useUserContext();
   const [cartData, setCartData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -19,7 +18,7 @@ const useCart = () => {
         
         setLoading(true);
         setError(null);
-        const response = await fetch(`${baseURL}/cart/${userId}`);
+        const response = await getCart(userId);
         if (!response.ok) {
           throw new Error(`Error fetching cart data: ${response.statusText}`);
         }
@@ -45,14 +44,7 @@ const useCart = () => {
 
   const addToCart = async (product) => {
     try {
-      const response = await fetch(
-        `${baseURL}/cart/${userId}?productId=${product._id}`,
-        {
-          method: "POST",
-          body: JSON.stringify(product),
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+      const response = await addToCart(userId, product.product._id, product);
 
       if (!response.ok) {
         throw new Error("Error adding product to cart");

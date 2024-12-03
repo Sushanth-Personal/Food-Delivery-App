@@ -1,0 +1,179 @@
+[
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Big Mac Meal",
+      "productDescription": "Two all-beef patties, special sauce, lettuce, cheese, pickles, onions on a sesame seed bun. Includes fries and a drink.",
+      "productPrice": 11.99,
+      "productCategory": "Burgers",
+      "productImageId": "mcdonalds-burgers-bigmacmeal"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Quarter Pounder with Cheese",
+      "productDescription": "A quarter pound of 100% fresh beef with cheese, onions, and pickles.",
+      "productPrice": 10.49,
+      "productCategory": "Burgers",
+      "productImageId": "mcdonalds-burgers-quarterpounderwithcheese"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "McChicken Sandwich",
+      "productDescription": "Crispy chicken patty, shredded lettuce, and mayonnaise.",
+      "productPrice": 6.99,
+      "productCategory": "Burgers",
+      "productImageId": "mcdonalds-burgers-mcchickensandwich"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Double Cheeseburger",
+      "productDescription": "Two 100% beef patties, cheese, pickles, onions, ketchup, and mustard.",
+      "productPrice": 7.99,
+      "productCategory": "Burgers",
+      "productImageId": "mcdonalds-burgers-doublecheeseburger"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "World Famous Fries",
+      "productDescription": "Crispy golden fries seasoned to perfection.",
+      "productPrice": 3.99,
+      "productCategory": "Sides",
+      "productImageId": "mcdonalds-sides-worldfamousfries"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Mozzarella Sticks",
+      "productDescription": "Crispy fried mozzarella sticks served with marinara sauce.",
+      "productPrice": 4.99,
+      "productCategory": "Sides",
+      "productImageId": "mcdonalds-sides-mozzarellasticks"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Chicken Nuggets",
+      "productDescription": "12 pieces of crispy chicken nuggets with dipping sauce.",
+      "productPrice": 8.49,
+      "productCategory": "Sides",
+      "productImageId": "mcdonalds-sides-chickennuggets"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Onion Rings",
+      "productDescription": "Golden-fried onion rings served with dipping sauce.",
+      "productPrice": 4.49,
+      "productCategory": "Sides",
+      "productImageId": "mcdonalds-sides-onionrings"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Coca-Cola",
+      "productDescription": "Chilled Coca-Cola served over ice.",
+      "productPrice": 2.49,
+      "productCategory": "Drinks",
+      "productImageId": "mcdonalds-drinks-cocacola"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Sprite",
+      "productDescription": "Refreshing lemon-lime soda served over ice.",
+      "productPrice": 2.49,
+      "productCategory": "Drinks",
+      "productImageId": "mcdonalds-drinks-sprite"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Chocolate Shake",
+      "productDescription": "Creamy chocolate milkshake made with real ice cream.",
+      "productPrice": 4.99,
+      "productCategory": "Drinks",
+      "productImageId": "mcdonalds-drinks-chocolateshake"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Iced Coffee",
+      "productDescription": "Cold-brewed coffee served with cream and sugar.",
+      "productPrice": 3.49,
+      "productCategory": "Drinks",
+      "productImageId": "mcdonalds-drinks-icedcoffee"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Hot Fudge Sundae",
+      "productDescription": "Vanilla soft serve topped with rich hot fudge.",
+      "productPrice": 3.49,
+      "productCategory": "Desserts",
+      "productImageId": "mcdonalds-desserts-hotfudgesundae"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Apple Pie",
+      "productDescription": "Warm, flaky pastry filled with spiced apples.",
+      "productPrice": 1.99,
+      "productCategory": "Desserts",
+      "productImageId": "mcdonalds-desserts-applepie"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "McFlurry",
+      "productDescription": "Creamy soft-serve ice cream blended with candies or cookies.",
+      "productPrice": 4.49,
+      "productCategory": "Desserts",
+      "productImageId": "mcdonalds-desserts-mcflurry"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Strawberry Sundae",
+      "productDescription": "Vanilla soft serve topped with strawberry syrup.",
+      "productPrice": 3.49,
+      "productCategory": "Desserts",
+      "productImageId": "mcdonalds-desserts-strawberrysundae"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Breakfast Burrito",
+      "productDescription": "Scrambled eggs, sausage, and cheese wrapped in a warm flour tortilla.",
+      "productPrice": 5.99,
+      "productCategory": "Breakfast",
+      "productImageId": "mcdonalds-breakfast-breakfastburrito"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Hotcakes",
+      "productDescription": "Fluffy pancakes served with syrup and butter.",
+      "productPrice": 6.99,
+      "productCategory": "Breakfast",
+      "productImageId": "mcdonalds-breakfast-hotcakes"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Egg McMuffin",
+      "productDescription": "Egg, cheese, and Canadian bacon on a toasted English muffin.",
+      "productPrice": 4.49,
+      "productCategory": "Breakfast",
+      "productImageId": "mcdonalds-breakfast-eggmcMuffin"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Bacon, Egg & Cheese Biscuit",
+      "productDescription": "Crispy bacon, egg, and cheese on a fluffy biscuit.",
+      "productPrice": 4.99,
+      "productCategory": "Breakfast",
+      "productImageId": "mcdonalds-breakfast-baconeggcheesebiscuit"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Happy Meal",
+      "productDescription": "A kid-friendly meal with nuggets, fries, and a drink.",
+      "productPrice": 5.49,
+      "productCategory": "Kids Meal",
+      "productImageId": "mcdonalds-kidsmeal-happymeal"
+    },
+    {
+      "restaurantId": "6746f6c5f215ba9397391196",
+      "productName": "Chicken McNuggets (4pc)",
+      "productDescription": "Four crispy chicken nuggets served with a dipping sauce.",
+      "productPrice": 3.49,
+      "productCategory": "Kids Meal",
+      "productImageId": "mcdonalds-kidsmeal-chickenmcnuggets4pc"
+    }
+  ]
+  
